@@ -3,16 +3,20 @@ module.exports = {
     '@mate-academy/eslint-config-react-typescript',
     'plugin:react/recommended',
   ],
+
   rules: {
     // React
     'react/prop-types': 0,
     'react/self-closing-comp': 0,
     'react/display-name': 0,
+    'no-param-reassign': ["error", { "props": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 
     // JavaScript
     semi: 0,
     'no-proto': 0,
     'no-unused-vars': 0,
+
 
     // TypeScript
     '@typescript-eslint/no-unused-vars': ['error'],
@@ -22,7 +26,10 @@ module.exports = {
     '@typescript-eslint/semi': ['error'],
   },
   parser: '@typescript-eslint/parser',
+
   plugins: [
     '@typescript-eslint',
   ],
+
+
 };
